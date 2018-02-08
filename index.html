@@ -44,12 +44,18 @@
       function initialise(){
         showChatTemplate(messages, document.getElementById("content"));
       }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var rootEl = document.createElement('div')
+        rootEl.id = 'content';
+        document.body.appendChild(rootEl);
+        initialise();
+        });
     </script>
   </head>
 
 
-  <body onload="initialise()">
+  <body >
     <h1>react-webpack-wrapper-example</h1>
-    <div style="max-width: 600px" id="content" />
   </body>
 </html>
